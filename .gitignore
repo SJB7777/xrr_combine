@@ -1,0 +1,38 @@
+# Python
+*.pyc
+__pycache__/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# VS Code
+.vscode/
+*.code-workspace
+
+# Environments
+env/
+venv/
+.venv/
+ENV/
+env.bak/
+venv.bak/
+
+# PyCharm
+.idea/
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Logs
+*.log
+
+# CSV files
+*.csv
+
+# Ignore combined data files
+combined_data*.txt
