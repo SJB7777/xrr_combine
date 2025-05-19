@@ -34,5 +34,5 @@ Desktop.ini
 # CSV files
 *.csv
 
-# Ignore combined data files
-combined_data*.txt
+# Results files
+.results/
