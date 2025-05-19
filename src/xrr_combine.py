@@ -28,7 +28,7 @@ def combine_xrr_measurements(datalist: list[pd.DataFrame]) -> pd.DataFrame:
 
     for data in datalist[1:]:
         rescale_factor = head_value / data.iloc[-1, 1]
-        data[['y', 'error']] = data[['y', 'error']] * rescale_factor
+        data[["y", "error"]] = data[["y", "error"]] * rescale_factor
         data.drop(index=data.index[-1], inplace=True)
         head_value = data.iloc[0, 1]
         new_datalist.append(data)
@@ -47,28 +47,26 @@ def read_data(filename: str) -> pd.DataFrame:
     Returns:
     pd.DataFrame: A dataframe containing the XRR measurement data with columns ["x", "y", "error"].
     """
-    return pd.read_csv(filename, sep='\\s+', header=None, names=["x", "y", "error"])
+    return pd.read_csv(filename, sep="\\s+", header=None, names=["x", "y", "error"])
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     # Example data
-    data1 = pd.DataFrame({
-        "x": [0.1, 0.2, 0.3, 0.4],
-        "y": [400, 300, 200, 100],
-        "error": [40, 30, 20, 10]
-    })
+    data1 = pd.DataFrame(
+        {
+            "x": [0.1, 0.2, 0.3, 0.4],
+            "y": [400, 300, 200, 100],
+            "error": [40, 30, 20, 10],
+        }
+    )
 
-    data2 = pd.DataFrame({
-        "x": [0.5, 0.6, 0.7, 0.8],
-        "y": [320, 240, 160, 80],
-        "error": [32, 24, 16, 8]
-    })
+    data2 = pd.DataFrame(
+        {"x": [0.5, 0.6, 0.7, 0.8], "y": [320, 240, 160, 80], "error": [32, 24, 16, 8]}
+    )
 
-    data3 = pd.DataFrame({
-        "x": [0.9, 1.0, 1.1, 1.2],
-        "y": [280, 210, 140, 70],
-        "error": [28, 21, 14, 7]
-    })
+    data3 = pd.DataFrame(
+        {"x": [0.9, 1.0, 1.1, 1.2], "y": [280, 210, 140, 70], "error": [28, 21, 14, 7]}
+    )
 
     # Combine the dataframes
     combined_df = combine_xrr_measurements([data1, data2, data3])
