@@ -6,7 +6,7 @@ from src.plot import plot_xrr_data
 
 def main() -> None:
     root: Path = Path("./data")
-    save_dir: Path = Path('./results')
+    save_dir: Path = Path("./results")
     save_dir.mkdir(exist_ok=True, parents=True)
 
     with open("scan_nums.txt", "r", encoding="utf-8") as f:
