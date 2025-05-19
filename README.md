@@ -11,40 +11,40 @@ This project combines XRR measurement data from multiple files, rescales the int
 ### Using `venv`
 
 1. Create a virtual environment:
-    ```sh
+    ```
     python -m venv .venv
     ```
 
 2. Activate the virtual environment:
 
     - On Windows:
-        ```sh
+        ```
         .\.venv\Scripts\activate
         ```
     - On macOS and Linux:
-        ```sh
+        ```
         source .venv/bin/activate
         ```
 
 3. Install the required packages:
-    ```sh
+    ```
     pip install -r requirements.txt
     ```
 
 ### Using `conda`
 
 1. Create a conda environment:
-    ```sh
+    ```
     conda create --name xrr_env
     ```
 
 2. Activate the conda environment:
-    ```sh
+    ```
     conda activate xrr_env
     ```
 
 3. Install the required packages:
-    ```sh
+    ```
     conda install pandas matplotlib
     ```
 
@@ -56,7 +56,7 @@ This project combines XRR measurement data from multiple files, rescales the int
 
    - **Using Command Line (Recommended for all OS):**
      Make sure your virtual environment (venv or conda) is activated, then run:
-     ```sh
+     ```
      python main.py
      ```
 
